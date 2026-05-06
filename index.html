@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Calendario de Exámenes</title>
+
+  <title>Calendario de Exámenes Finales</title>
 
   <style>
 
     body{
       font-family:'Segoe UI', sans-serif;
-      background:linear-gradient(135deg,#dfe9f3,#ffffff);
       margin:0;
       padding:30px;
+      background:linear-gradient(135deg,#dfe9f3,#ffffff);
       display:flex;
       flex-wrap:wrap;
       justify-content:center;
@@ -27,10 +29,12 @@
     .header h1{
       margin:0;
       color:#2c3e50;
+      font-size:38px;
     }
 
     .header p{
       color:#555;
+      font-size:18px;
     }
 
     .card{
@@ -46,34 +50,31 @@
     }
 
     .title{
-      font-size:22px;
+      font-size:24px;
       font-weight:bold;
-      margin-bottom:10px;
+      margin-bottom:12px;
       color:#2c3e50;
     }
 
+    .docente{
+      margin-bottom:15px;
+      color:#444;
+      font-size:15px;
+    }
+
     .section{
-      margin-top:15px;
-      background:rgba(255,255,255,0.4);
+      background:rgba(255,255,255,0.45);
       padding:12px;
       border-radius:12px;
+      margin-top:12px;
+      line-height:1.7;
     }
 
     .label{
       font-weight:bold;
-      margin-bottom:8px;
       color:#34495e;
-    }
-
-    input{
-      width:100%;
-      padding:10px;
-      border:none;
-      border-radius:10px;
-      margin-top:6px;
-      font-size:14px;
-      outline:none;
-      box-sizing:border-box;
+      margin-bottom:5px;
+      font-size:16px;
     }
 
     /* Colores */
@@ -94,11 +95,11 @@
       background:#d6e4ff;
     }
 
-    .infecto{
+    .infectologia{
       background:#ead6ff;
     }
 
-    .inmuno{
+    .inmunologia{
       background:#d6fff8;
     }
 
@@ -117,112 +118,237 @@
     <p>Semestre Enero - Julio 2026</p>
   </div>
 
-  <script>
+  <!-- Genética -->
 
-    function guardar(id, valor){
-      localStorage.setItem(id, valor);
-    }
+  <div class="card genetica">
 
-    function obtener(id){
-      return localStorage.getItem(id) || "";
-    }
+    <div class="title">Genética</div>
 
-    function crearTarjeta(nombre, clase){
+    <div class="docente">
+      Docente: Dra. Nombre del Docente
+    </div>
 
-      return `
+    <div class="section">
+      <div class="label">Ordinario</div>
 
-      <div class="card ${clase}">
+      Fecha: 10 de junio de 2026 <br>
+      Hora: 8:00 AM
+    </div>
 
-        <div class="title">${nombre}</div>
+    <div class="section">
+      <div class="label">Extraordinario</div>
 
-        <div class="section">
+      Fecha: 20 de junio de 2026 <br>
+      Hora: 9:00 AM
+    </div>
 
-          <div class="label">Docente</div>
+    <div class="section">
+      <div class="label">ATS</div>
 
-          <input
-            type="text"
-            placeholder="Escribe el docente"
-            value="${obtener(nombre+'docente')}"
-            oninput="guardar('${nombre}docente', this.value)"
-          >
+      Fecha: 28 de junio de 2026 <br>
+      Hora: 11:00 AM
+    </div>
 
-        </div>
+  </div>
 
-        <div class="section">
+  <!-- Nutrición -->
 
-          <div class="label">Ordinario</div>
+  <div class="card nutricion">
 
-          <input
-            type="text"
-            placeholder="Fecha"
-            value="${obtener(nombre+'ordinariofecha')}"
-            oninput="guardar('${nombre}ordinariofecha', this.value)"
-          >
+    <div class="title">Nutrición</div>
 
-          <input
-            type="text"
-            placeholder="Hora"
-            value="${obtener(nombre+'ordinariohora')}"
-            oninput="guardar('${nombre}ordinariohora', this.value)"
-          >
+    <div class="docente">
+      Docente: Dra. Nombre del Docente
+    </div>
 
-        </div>
+    <div class="section">
+      <div class="label">Ordinario</div>
 
-        <div class="section">
+      Fecha: 11 de junio de 2026 <br>
+      Hora: 10:00 AM
+    </div>
 
-          <div class="label">Extraordinario</div>
+    <div class="section">
+      <div class="label">Extraordinario</div>
 
-          <input
-            type="text"
-            placeholder="Fecha"
-            value="${obtener(nombre+'extrafecha')}"
-            oninput="guardar('${nombre}extrafecha', this.value)"
-          >
+      Fecha: 21 de junio de 2026 <br>
+      Hora: 8:00 AM
+    </div>
 
-          <input
-            type="text"
-            placeholder="Hora"
-            value="${obtener(nombre+'extrahora')}"
-            oninput="guardar('${nombre}extrahora', this.value)"
-          >
+    <div class="section">
+      <div class="label">ATS</div>
 
-        </div>
+      Fecha: 29 de junio de 2026 <br>
+      Hora: 1:00 PM
+    </div>
 
-        <div class="section">
+  </div>
 
-          <div class="label">ATS</div>
+  <!-- Hematología -->
 
-          <input
-            type="text"
-            placeholder="Fecha"
-            value="${obtener(nombre+'atsfecha')}"
-            oninput="guardar('${nombre}atsfecha', this.value)"
-          >
+  <div class="card hematologia">
 
-          <input
-            type="text"
-            placeholder="Hora"
-            value="${obtener(nombre+'atshora')}"
-            oninput="guardar('${nombre}atshora', this.value)"
-          >
+    <div class="title">Hematología</div>
 
-        </div>
+    <div class="docente">
+      Docente: Dr. Nombre del Docente
+    </div>
 
-      </div>
+    <div class="section">
+      <div class="label">Ordinario</div>
 
-      `;
-    }
+      Fecha: 12 de junio de 2026 <br>
+      Hora: 7:00 AM
+    </div>
 
-    document.body.innerHTML +=
-      crearTarjeta("Genética","genetica") +
-      crearTarjeta("Nutrición","nutricion") +
-      crearTarjeta("Hematología","hematologia") +
-      crearTarjeta("Bioinformática Médica","bioinfo") +
-      crearTarjeta("Infectología","infecto") +
-      crearTarjeta("Inmunología","inmuno") +
-      crearTarjeta("Práctica Clínica General","clinica");
+    <div class="section">
+      <div class="label">Extraordinario</div>
 
-  </script>
+      Fecha: 22 de junio de 2026 <br>
+      Hora: 10:00 AM
+    </div>
+
+    <div class="section">
+      <div class="label">ATS</div>
+
+      Fecha: 30 de junio de 2026 <br>
+      Hora: 12:00 PM
+    </div>
+
+  </div>
+
+  <!-- Bioinformática -->
+
+  <div class="card bioinfo">
+
+    <div class="title">Bioinformática Médica</div>
+
+    <div class="docente">
+      Docente: Mtro. Nombre del Docente
+    </div>
+
+    <div class="section">
+      <div class="label">Ordinario</div>
+
+      Fecha: 13 de junio de 2026 <br>
+      Hora: 9:00 AM
+    </div>
+
+    <div class="section">
+      <div class="label">Extraordinario</div>
+
+      Fecha: 23 de junio de 2026 <br>
+      Hora: 8:00 AM
+    </div>
+
+    <div class="section">
+      <div class="label">ATS</div>
+
+      Fecha: 1 de julio de 2026 <br>
+      Hora: 10:00 AM
+    </div>
+
+  </div>
+
+  <!-- Infectología -->
+
+  <div class="card infectologia">
+
+    <div class="title">Infectología</div>
+
+    <div class="docente">
+      Docente: Dra. Nombre del Docente
+    </div>
+
+    <div class="section">
+      <div class="label">Ordinario</div>
+
+      Fecha: 14 de junio de 2026 <br>
+      Hora: 11:00 AM
+    </div>
+
+    <div class="section">
+      <div class="label">Extraordinario</div>
+
+      Fecha: 24 de junio de 2026 <br>
+      Hora: 9:00 AM
+    </div>
+
+    <div class="section">
+      <div class="label">ATS</div>
+
+      Fecha: 2 de julio de 2026 <br>
+      Hora: 1:00 PM
+    </div>
+
+  </div>
+
+  <!-- Inmunología -->
+
+  <div class="card inmunologia">
+
+    <div class="title">Inmunología</div>
+
+    <div class="docente">
+      Docente: Dra. Nombre del Docente
+    </div>
+
+    <div class="section">
+      <div class="label">Ordinario</div>
+
+      Fecha: 15 de junio de 2026 <br>
+      Hora: 8:00 AM
+    </div>
+
+    <div class="section">
+      <div class="label">Extraordinario</div>
+
+      Fecha: 25 de junio de 2026 <br>
+      Hora: 7:00 AM
+    </div>
+
+    <div class="section">
+      <div class="label">ATS</div>
+
+      Fecha: 3 de julio de 2026 <br>
+      Hora: 9:00 AM
+    </div>
+
+  </div>
+
+  <!-- Práctica Clínica -->
+
+  <div class="card clinica">
+
+    <div class="title">Práctica Clínica General</div>
+
+    <div class="docente">
+      Docente: Dr. Nombre del Docente
+    </div>
+
+    <div class="section">
+      <div class="label">Ordinario</div>
+
+      Fecha: 16 de junio de 2026 <br>
+      Hora: 7:00 AM
+    </div>
+
+    <div class="section">
+      <div class="label">Extraordinario</div>
+
+      Fecha: 26 de junio de 2026 <br>
+      Hora: 8:00 AM
+    </div>
+
+    <div class="section">
+      <div class="label">ATS</div>
+
+      Fecha: 4 de julio de 2026 <br>
+      Hora: 10:00 AM
+    </div>
+
+  </div>
 
 </body>
+
 </html>
