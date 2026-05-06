@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calendario de Exámenes</title>
+
+  <style>
+
+    body{
+      font-family:'Segoe UI', sans-serif;
+      background:linear-gradient(135deg,#dfe9f3,#ffffff);
+      margin:0;
+      padding:30px;
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:20px;
+    }
+
+    .header{
+      width:100%;
+      text-align:center;
+      margin-bottom:20px;
+    }
+
+    .header h1{
+      margin:0;
+      color:#2c3e50;
+    }
+
+    .header p{
+      color:#555;
+    }
+
+    .card{
+      width:320px;
+      padding:20px;
+      border-radius:20px;
+      box-shadow:0 10px 20px rgba(0,0,0,0.15);
+      transition:0.3s;
+    }
+
+    .card:hover{
+      transform:translateY(-5px);
+    }
+
+    .title{
+      font-size:22px;
+      font-weight:bold;
+      margin-bottom:10px;
+      color:#2c3e50;
+    }
+
+    .section{
+      margin-top:15px;
+      background:rgba(255,255,255,0.4);
+      padding:12px;
+      border-radius:12px;
+    }
+
+    .label{
+      font-weight:bold;
+      margin-bottom:8px;
+      color:#34495e;
+    }
+
+    input{
+      width:100%;
+      padding:10px;
+      border:none;
+      border-radius:10px;
+      margin-top:6px;
+      font-size:14px;
+      outline:none;
+      box-sizing:border-box;
+    }
+
+    /* Colores */
+
+    .genetica{
+      background:#c8f7dc;
+    }
+
+    .nutricion{
+      background:#fff4b8;
+    }
+
+    .hematologia{
+      background:#ffd6d6;
+    }
+
+    .bioinfo{
+      background:#d6e4ff;
+    }
+
+    .infecto{
+      background:#ead6ff;
+    }
+
+    .inmuno{
+      background:#d6fff8;
+    }
+
+    .clinica{
+      background:#ffe5c2;
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <div class="header">
+    <h1>Calendario de Exámenes Finales</h1>
+    <p>Semestre Enero - Julio 2026</p>
+  </div>
+
+  <script>
+
+    function guardar(id, valor){
+      localStorage.setItem(id, valor);
+    }
+
+    function obtener(id){
+      return localStorage.getItem(id) || "";
+    }
+
+    function crearTarjeta(nombre, clase){
+
+      return `
+
+      <div class="card ${clase}">
+
+        <div class="title">${nombre}</div>
+
+        <div class="section">
+
+          <div class="label">Docente</div>
+
+          <input
+            type="text"
+            placeholder="Escribe el docente"
+            value="${obtener(nombre+'docente')}"
+            oninput="guardar('${nombre}docente', this.value)"
+          >
+
+        </div>
+
+        <div class="section">
+
+          <div class="label">Ordinario</div>
+
+          <input
+            type="text"
+            placeholder="Fecha"
+            value="${obtener(nombre+'ordinariofecha')}"
+            oninput="guardar('${nombre}ordinariofecha', this.value)"
+          >
+
+          <input
+            type="text"
+            placeholder="Hora"
+            value="${obtener(nombre+'ordinariohora')}"
+            oninput="guardar('${nombre}ordinariohora', this.value)"
+          >
+
+        </div>
+
+        <div class="section">
+
+          <div class="label">Extraordinario</div>
+
+          <input
+            type="text"
+            placeholder="Fecha"
+            value="${obtener(nombre+'extrafecha')}"
+            oninput="guardar('${nombre}extrafecha', this.value)"
+          >
+
+          <input
+            type="text"
+            placeholder="Hora"
+            value="${obtener(nombre+'extrahora')}"
+            oninput="guardar('${nombre}extrahora', this.value)"
+          >
+
+        </div>
+
+        <div class="section">
+
+          <div class="label">ATS</div>
+
+          <input
+            type="text"
+            placeholder="Fecha"
+            value="${obtener(nombre+'atsfecha')}"
+            oninput="guardar('${nombre}atsfecha', this.value)"
+          >
+
+          <input
+            type="text"
+            placeholder="Hora"
+            value="${obtener(nombre+'atshora')}"
+            oninput="guardar('${nombre}atshora', this.value)"
+          >
+
+        </div>
+
+      </div>
+
+      `;
+    }
+
+    document.body.innerHTML +=
+      crearTarjeta("Genética","genetica") +
+      crearTarjeta("Nutrición","nutricion") +
+      crearTarjeta("Hematología","hematologia") +
+      crearTarjeta("Bioinformática Médica","bioinfo") +
+      crearTarjeta("Infectología","infecto") +
+      crearTarjeta("Inmunología","inmuno") +
+      crearTarjeta("Práctica Clínica General","clinica");
+
+  </script>
+
+</body>
+</html>
