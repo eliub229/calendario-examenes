@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Calendario de Exámenes Finales</title>
+  <title>CALENDARIO DE EXÁMENES FINALES</title>
 
   <style>
 
@@ -18,6 +18,7 @@
       flex-wrap:wrap;
       justify-content:center;
       gap:20px;
+      text-transform:uppercase;
     }
 
     .header{
@@ -29,7 +30,8 @@
     .header h1{
       margin:0;
       color:#2c3e50;
-      font-size:38px;
+      font-size:40px;
+      letter-spacing:2px;
     }
 
     .header p{
@@ -38,73 +40,137 @@
     }
 
     .card{
-      width:320px;
+      width:340px;
       padding:20px;
-      border-radius:20px;
-      box-shadow:0 10px 20px rgba(0,0,0,0.15);
-      transition:0.3s;
-    }
-
-    .card:hover{
-      transform:translateY(-5px);
+      border-radius:30px;
+      box-shadow:0 10px 25px rgba(0,0,0,0.18);
     }
 
     .title{
       font-size:24px;
       font-weight:bold;
-      margin-bottom:12px;
+      text-align:center;
+      margin-bottom:15px;
       color:#2c3e50;
+      text-shadow:2px 2px 6px rgba(0,0,0,0.25);
+      letter-spacing:1px;
     }
 
     .docente{
+      text-align:center;
       margin-bottom:15px;
+      font-weight:bold;
       color:#444;
-      font-size:15px;
+      font-size:14px;
     }
 
     .section{
+      position:relative;
       background:rgba(255,255,255,0.45);
-      padding:12px;
-      border-radius:12px;
-      margin-top:12px;
-      line-height:1.7;
+      border-radius:18px;
+      padding:18px 25px;
+      margin-top:15px;
+      line-height:1.9;
+      box-shadow:0 4px 10px rgba(0,0,0,0.08);
+      overflow:hidden;
     }
 
     .label{
+      position:absolute;
+      top:50%;
+      right:10px;
+      transform:translateY(-50%);
+      width:32px;
+      height:125px;
+
+      color:white;
+
+      display:flex;
+      align-items:center;
+      justify-content:center;
+
+      writing-mode:vertical-rl;
+
+      border-radius:50px;
+
+      font-size:9px;
       font-weight:bold;
-      color:#34495e;
-      margin-bottom:5px;
-      font-size:16px;
+
+      letter-spacing:1px;
+
+      box-shadow:0 4px 10px rgba(0,0,0,0.25);
+
+      text-align:center;
     }
 
-    /* Colores */
+    /* GENÉTICA */
 
     .genetica{
       background:#c8f7dc;
     }
 
+    .genetica .label{
+      background:#1b9c5a;
+    }
+
+    /* NUTRICIÓN */
+
     .nutricion{
       background:#fff4b8;
     }
+
+    .nutricion .label{
+      background:#d4a900;
+    }
+
+    /* HEMATOLOGÍA */
 
     .hematologia{
       background:#ffd6d6;
     }
 
+    .hematologia .label{
+      background:#d64545;
+    }
+
+    /* BIOINFORMÁTICA */
+
     .bioinfo{
       background:#d6e4ff;
     }
+
+    .bioinfo .label{
+      background:#2f6edb;
+    }
+
+    /* INFECTOLOGÍA */
 
     .infectologia{
       background:#ead6ff;
     }
 
+    .infectologia .label{
+      background:#7b3fc9;
+    }
+
+    /* INMUNOLOGÍA */
+
     .inmunologia{
       background:#d6fff8;
     }
 
+    .inmunologia .label{
+      background:#159b85;
+    }
+
+    /* PRÁCTICA CLÍNICA */
+
     .clinica{
       background:#ffe5c2;
+    }
+
+    .clinica .label{
+      background:#d9822b;
     }
 
   </style>
@@ -114,237 +180,231 @@
 <body>
 
   <div class="header">
-    <h1>Calendario de Exámenes Finales</h1>
-    <p>Semestre Enero - Julio 2026</p>
+    <h1>CALENDARIO DE EXÁMENES FINALES</h1>
+    <p>SEMESTRE ENERO - JULIO 2026</p>
   </div>
 
-  <!-- Genética -->
+  <!-- GENÉTICA -->
 
   <div class="card genetica">
 
-    <div class="title">Genética</div>
+    <div class="title">GENÉTICA</div>
 
     <div class="docente">
-      Docente: Gerardo Antonio Flores Diaz
+      DOCENTE: POR DEFINIR
     </div>
 
     <div class="section">
-      <div class="label">Ordinario</div>
 
-      Fecha: POR DEFINIR <br>
-      Hora: POR DEFINIR
+      <div class="label">
+        ORDINARIO
+      </div>
+
+      FECHA: POR DEFINIR <br>
+      HORA: POR DEFINIR
+
     </div>
 
     <div class="section">
-      <div class="label">Extraordinario</div>
 
-      Fecha: POR DEFINIR <br>
-      Hora: POR DEFINIR
+      <div class="label">
+        EXTRAORDINARIO
+      </div>
+
+      FECHA: POR DEFINIR <br>
+      HORA: POR DEFINIR
+
     </div>
 
     <div class="section">
-      <div class="label">ATS</div>
 
-      Fecha: POR DEFINIR <br>
-      Hora: POR DEFINIR
+      <div class="label">
+        ATS
+      </div>
+
+      FECHA: POR DEFINIR <br>
+      HORA: POR DEFINIR
+
     </div>
 
   </div>
 
-  <!-- Nutrición -->
+  <!-- NUTRICIÓN -->
 
   <div class="card nutricion">
 
-    <div class="title">Nutrición</div>
+    <div class="title">NUTRICIÓN</div>
 
     <div class="docente">
-      Docente: Leopoldo Sanchez Ortega
+      DOCENTE: POR DEFINIR
     </div>
 
     <div class="section">
-      <div class="label">Ordinario</div>
-
-      Fecha: POR DEFINIR <br>
-      Hora: POR DEFINIR
+      <div class="label">ORDINARIO</div>
+      FECHA: POR DEFINIR <br>
+      HORA: POR DEFINIR
     </div>
 
     <div class="section">
-      <div class="label">Extraordinario</div>
-
-      Fecha: POR DEFINIR <br>
-      Hora: POR DEFINIR
+      <div class="label">EXTRAORDINARIO</div>
+      FECHA: POR DEFINIR <br>
+      HORA: POR DEFINIR
     </div>
 
     <div class="section">
       <div class="label">ATS</div>
-
-      Fecha: POR DEFINIR <br>
-      Hora: POR DEFINIR
+      FECHA: POR DEFINIR <br>
+      HORA: POR DEFINIR
     </div>
 
   </div>
 
-  <!-- Hematología -->
+  <!-- HEMATOLOGÍA -->
 
   <div class="card hematologia">
 
-    <div class="title">Hematología</div>
+    <div class="title">HEMATOLOGÍA</div>
 
     <div class="docente">
-      Docente: Carlos Alberto Rocha Rodriguez
+      DOCENTE: POR DEFINIR
     </div>
 
     <div class="section">
-      <div class="label">Ordinario</div>
-
-      Fecha: POR DEFINIR <br>
-      Hora: POR DEFINIR
+      <div class="label">ORDINARIO</div>
+      FECHA: POR DEFINIR <br>
+      HORA: POR DEFINIR
     </div>
 
     <div class="section">
-      <div class="label">Extraordinario</div>
-
-      Fecha: POR DEFINIR <br>
-      Hora: POR DEFINIR
+      <div class="label">EXTRAORDINARIO</div>
+      FECHA: POR DEFINIR <br>
+      HORA: POR DEFINIR
     </div>
 
     <div class="section">
       <div class="label">ATS</div>
-
-      Fecha: POR DEFINIR <br>
-      Hora: POR DEFINIR
+      FECHA: POR DEFINIR <br>
+      HORA: POR DEFINIR
     </div>
 
   </div>
 
-  <!-- Bioinformática -->
+  <!-- BIOINFORMÁTICA -->
 
   <div class="card bioinfo">
 
-    <div class="title">Bioinformática Médica</div>
+    <div class="title">BIOINFORMÁTICA MÉDICA</div>
 
     <div class="docente">
-      Docente: Victor Ramon Herrera Acosta
+      DOCENTE: POR DEFINIR
     </div>
 
     <div class="section">
-      <div class="label">Ordinario</div>
-
-      Fecha: POR DEFINIR <br>
-      Hora: POR DEFINIR
+      <div class="label">ORDINARIO</div>
+      FECHA: POR DEFINIR <br>
+      HORA: POR DEFINIR
     </div>
 
     <div class="section">
-      <div class="label">Extraordinario</div>
-
-      Fecha: POR DEFINIR <br>
-      Hora: POR DEFINIR
+      <div class="label">EXTRAORDINARIO</div>
+      FECHA: POR DEFINIR <br>
+      HORA: POR DEFINIR
     </div>
 
     <div class="section">
       <div class="label">ATS</div>
-
-      Fecha: POR DEFINIR <br>
-      Hora: POR DEFINIR
+      FECHA: POR DEFINIR <br>
+      HORA: POR DEFINIR
     </div>
 
   </div>
 
-  <!-- Infectología -->
+  <!-- INFECTOLOGÍA -->
 
   <div class="card infectologia">
 
-    <div class="title">Infectología</div>
+    <div class="title">INFECTOLOGÍA</div>
 
     <div class="docente">
-      Docente: Hector Hernadez Herrera
+      DOCENTE: POR DEFINIR
     </div>
 
     <div class="section">
-      <div class="label">Ordinario</div>
-
-      Fecha: POR DEFINIR <br>
-      Hora: POR DEFINIR
+      <div class="label">ORDINARIO</div>
+      FECHA: POR DEFINIR <br>
+      HORA: POR DEFINIR
     </div>
 
     <div class="section">
-      <div class="label">Extraordinario</div>
-
-      Fecha: POR DEFINIR <br>
-      Hora: POR DEFINIR
+      <div class="label">EXTRAORDINARIO</div>
+      FECHA: POR DEFINIR <br>
+      HORA: POR DEFINIR
     </div>
 
     <div class="section">
       <div class="label">ATS</div>
-
-      Fecha: POR DEFINIR <br>
-      Hora: POR DEFINIR
+      FECHA: POR DEFINIR <br>
+      HORA: POR DEFINIR
     </div>
 
   </div>
 
-  <!-- Inmunología -->
+  <!-- INMUNOLOGÍA -->
 
   <div class="card inmunologia">
 
-    <div class="title">Inmunología</div>
+    <div class="title">INMUNOLOGÍA</div>
 
     <div class="docente">
-      Docente: ****************
+      DOCENTE: POR DEFINIR
     </div>
 
     <div class="section">
-      <div class="label">Ordinario</div>
-
-      Fecha: POR DEFINIR <br>
-      Hora: POR DEFINIR
+      <div class="label">ORDINARIO</div>
+      FECHA: POR DEFINIR <br>
+      HORA: POR DEFINIR
     </div>
 
     <div class="section">
-      <div class="label">Extraordinario</div>
-
-      Fecha: POR DEFINIR <br>
-      Hora: POR DEFINIR
+      <div class="label">EXTRAORDINARIO</div>
+      FECHA: POR DEFINIR <br>
+      HORA: POR DEFINIR
     </div>
 
     <div class="section">
       <div class="label">ATS</div>
-
-      Fecha: POR DEFINIR <br>
-      Hora: POR DEFINIR
+      FECHA: POR DEFINIR <br>
+      HORA: POR DEFINIR
     </div>
 
   </div>
 
-  <!-- Práctica Clínica -->
+  <!-- PRÁCTICA CLÍNICA -->
 
   <div class="card clinica">
 
-    <div class="title">Práctica Clínica General</div>
+    <div class="title">PRÁCTICA CLÍNICA GENERAL</div>
 
     <div class="docente">
-      Docente: DR. DE PRIMERA ROTACION
+      DOCENTE: POR DEFINIR
     </div>
 
     <div class="section">
-      <div class="label">Ordinario</div>
-
-      Fecha: NO APLICA <br>
-      Hora: NO APLICA
+      <div class="label">ORDINARIO</div>
+      FECHA: POR DEFINIR <br>
+      HORA: POR DEFINIR
     </div>
 
     <div class="section">
-      <div class="label">Extraordinario</div>
-
-      Fecha: JUEVES 28 JUNIO 2026 <br>
-      Hora: POR DEFINIR
+      <div class="label">EXTRAORDINARIO</div>
+      FECHA: POR DEFINIR <br>
+      HORA: POR DEFINIR
     </div>
 
     <div class="section">
       <div class="label">ATS</div>
-
-      Fecha: JUEVES 04 JUNIO 2026 <br>
-      Hora: POR DEFINIR
+      FECHA: POR DEFINIR <br>
+      HORA: POR DEFINIR
     </div>
 
   </div>
